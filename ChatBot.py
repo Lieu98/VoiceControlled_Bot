@@ -47,14 +47,10 @@ def main():
         engine.say("What language would you like your text translated to?")
         engine.setProperty('rate',120)
         engine.setProperty('volume', 0.9)
-        engine.runAndWait()
-        
-        
-            
+        engine.runAndWait()  
         lang_2 = talk()
         
         print("From what language you want your text translated to?")
-        
         engine.say("From what language you want your text translated to?")
         engine.setProperty('rate',120)
         engine.setProperty('volume', 0.9)
@@ -67,10 +63,8 @@ def main():
         engine.setProperty('rate',120)
         engine.setProperty('volume', 0.9)
         engine.runAndWait()
-        
         request=talk()
-        #response = str(chatbot.get_response(request))
-        #print("Bot: " + tl.outputTranslation(response,lang))
+        
         translator= Translator(from_lang=lang_1,to_lang= lang_2)
         translation = translator.translate(request)
         print (translation)
@@ -78,8 +72,7 @@ def main():
         engine.setProperty('rate',120)
         engine.setProperty('volume', 0.9)
         engine.runAndWait()
-        #if(request=="break"):
-        #break
+        
             
     except KeyboardInterrupt:
         
